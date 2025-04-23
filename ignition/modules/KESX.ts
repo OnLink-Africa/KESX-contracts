@@ -10,7 +10,7 @@ const ERC20TokenModule = buildModule('ERC20TokenModule', (m) => {
   const initialSupply = m.getParameter('initialSupply', 1000000) // 1 million tokens
 
   // Deploy the ERC20 token
-  const token = m.contract('ERC20Token', [name, symbol, initialSupply])
+  const token = m.contract('KESX', [name, symbol, initialSupply])
 
   return { token }
 })
