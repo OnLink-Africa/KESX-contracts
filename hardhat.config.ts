@@ -1,40 +1,25 @@
 import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import '@nomicfoundation/hardhat-ignition'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
+
+// Get environment variables
+const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY || ''
+const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
 
 const config: HardhatUserConfig = {
-  solidity: {
-    compilers: [
-      {
-        version: '0.8.29',
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200
-          }
-        }
-      },
-      {
-        version: '0.4.24', // For USDC contracts
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200
-          }
-        }
-      }
-    ],
-    overrides: {
-      'contracts/mockUSDC.sol': {
-        version: '0.4.24',
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200
-          }
-        }
-      }
+  solidity: '0.8.29',
+
+  networks: {
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     }
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY // Optional: for verification
   }
 }
 
