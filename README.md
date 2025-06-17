@@ -10,6 +10,10 @@ The KESX token is a standard ERC20 token with the following default parameters:
 - Symbol: KESX
 - Initial Supply: 1,000,000 tokens (with 18 decimals)
 
+## Deployments
+
+Sepolia: 0xe82426454EAB00a3D7C7Ba2E9f38063e05962880
+
 ## Development
 
 Try running some of the following tasks:
