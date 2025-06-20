@@ -14,6 +14,8 @@ The KESX token is a standard ERC20 token with the following default parameters:
 
 Sepolia: 0xe82426454EAB00a3D7C7Ba2E9f38063e05962880
 
+Uniswap pool with USDC on Sepolia: <https://app.uniswap.org/positions/v4/ethereum_sepolia/13971>
+
 ## Development
 
 Try running some of the following tasks:
