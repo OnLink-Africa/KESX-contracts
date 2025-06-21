@@ -13,14 +13,14 @@ async function main() {
 
   // Deploy the upgradeable contract
   const KESXUpgradeable = await ethers.getContractFactory('KESXUpgradeable')
-  const token = (await upgrades.deployProxy(
+  const token = await upgrades.deployProxy(
     KESXUpgradeable,
     [name, symbol, initialSupply, deployer.address],
     {
       initializer: 'initialize',
       kind: 'uups'
     }
-  )) as any
+  )
 
   await token.waitForDeployment()
   const tokenAddress = await token.getAddress()
@@ -30,6 +30,11 @@ async function main() {
   console.log('Token symbol:', await token.symbol())
   console.log('Total supply:', await token.totalSupply())
   console.log('Owner:', await token.owner())
+
+  // Get the implementation address
+  const implementationAddress =
+    await upgrades.erc1967.getImplementationAddress(tokenAddress)
+  console.log('Implementation address:', implementationAddress)
 
   // Verify the deployment
   console.log('\nVerifying deployment...')
@@ -43,6 +48,8 @@ async function main() {
     (await token.balanceOf(deployer.address)).toString() ===
       (await token.totalSupply()).toString()
   )
+
+  console.log('\nFor future upgrades, use the PROXY address:', tokenAddress)
 }
 
 main()
