@@ -1,6 +1,7 @@
 import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import '@nomicfoundation/hardhat-ignition'
+import '@openzeppelin/hardhat-upgrades'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -10,7 +11,24 @@ const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY || ''
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.29',
+  // Include test contracts in compilation
+  paths: {
+    sources: './contracts',
+    tests: './test',
+    cache: './cache',
+    artifacts: './artifacts'
+  },
+
+  // Add test contracts to compilation sources
+  solidity: {
+    version: '0.8.29',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
 
   networks: {
     sepolia: {
