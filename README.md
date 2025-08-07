@@ -37,7 +37,7 @@ Total supply: 1000000000000000000000000n
 Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
 Implementation address: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
 
-### None Upgradable Contract Deployment
+### Depricated: None Upgradable Contract Deployment
 
 Sepolia: 0xe82426454EAB00a3D7C7Ba2E9f38063e05962880
 
