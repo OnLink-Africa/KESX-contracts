@@ -8,8 +8,8 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 /**
- * @title KESXUpgradeable
- * @dev Kenyan Shilling Stablecoin - Upgradeable ERC20 Token
+ * @title GBPXUpgradeable
+ * @dev British Pound Stablecoin - Upgradeable ERC20 Token
  *
  * This contract implements an upgradeable ERC20 token with the following features:
  * - Standard ERC20 functionality
