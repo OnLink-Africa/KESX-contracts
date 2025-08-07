@@ -28,11 +28,20 @@ The KESX token is a standard ERC20 token with the following default parameters:
 
 ## Deployments
 
-### Upgradeable Contract
+### Upgradeable KESX Contract
 
 KESXUpgradeable deployed to: 0xc1bF2DD5Dd1a0D4CdAd5bDD749BA23e228A7b170
 Token name: Kenyan Shilling Stablecoin
 Token symbol: KESX
+Total supply: 1000000000000000000000000n
+Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
+Implementation address: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
+
+### GBPX Contract
+
+GBPXUpgradeable deployed to: 0x0BA8168Fde926504D44a9AeBaDC50E5c4DE256B2
+Token name: British Pound Stablecoin
+Token symbol: GBPX
 Total supply: 1000000000000000000000000n
 Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
 Implementation address: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e

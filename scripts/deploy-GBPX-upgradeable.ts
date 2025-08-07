@@ -2,19 +2,19 @@ import { ethers, upgrades } from 'hardhat'
 
 async function main() {
   const [deployer] = await ethers.getSigners()
-  console.log('Deploying contracts with the account:', deployer.address)
+  console.log('Deploying GBPX contract with the account:', deployer.address)
 
   // Contract parameters
-  const name = 'Kenyan Shilling Stablecoin'
-  const symbol = 'KESX'
+  const name = 'British Pound Stablecoin'
+  const symbol = 'GBPX'
   const initialSupply = 1000000 // 1 million tokens
 
-  console.log('Deploying KESXUpgradeable...')
+  console.log('Deploying GBPXUpgradeable...')
 
   // Deploy the upgradeable contract
-  const KESXUpgradeable = await ethers.getContractFactory('KESXUpgradeable')
+  const GBPXUpgradeable = await ethers.getContractFactory('GBPXUpgradeable')
   const token = await upgrades.deployProxy(
-    KESXUpgradeable,
+    GBPXUpgradeable,
     [name, symbol, initialSupply, deployer.address],
     {
       initializer: 'initialize',
@@ -25,7 +25,7 @@ async function main() {
   await token.waitForDeployment()
   const tokenAddress = await token.getAddress()
 
-  console.log('KESXUpgradeable deployed to:', tokenAddress)
+  console.log('GBPXUpgradeable deployed to:', tokenAddress)
   console.log('Token name:', await token.name())
   console.log('Token symbol:', await token.symbol())
   console.log('Total supply:', await token.totalSupply())
