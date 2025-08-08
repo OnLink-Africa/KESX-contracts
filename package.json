@@ -23,12 +23,15 @@
     "deploy:upgradeable:local": "hardhat run scripts/deploy-upgradeable.ts --network localhost",
     "deploy:upgradeable:testnet": "hardhat run scripts/deploy-upgradeable.ts --network sepolia",
     "deploy:upgradeable:mainnet": "hardhat run scripts/deploy-upgradeable.ts --network mainnet",
+    "deploy:GBPX:testnet": "hardhat run scripts/deploy-GBPX-upgradeable.ts --network sepolia",
     "upgrade": "hardhat run scripts/upgrade.ts",
     "upgrade:local": "hardhat run scripts/upgrade.ts --network localhost",
     "upgrade:testnet": "hardhat run scripts/upgrade.ts --network sepolia",
     "upgrade:mainnet": "hardhat run scripts/upgrade.ts --network mainnet",
     "verify:implementation": "hardhat verify --network sepolia 0x3d7c1cfb36f394000406bb24f3d37f602acbd83e",
-    "verify:proxy": "hardhat verify --network sepolia 0xc1bF2DD5Dd1a0D4CdAd5bDD749BA23e228A7b170"
+    "verify:proxy": "hardhat verify --network sepolia 0xc1bF2DD5Dd1a0D4CdAd5bDD749BA23e228A7b170",
+    "verify:GBPX:proxy": "hardhat verify --network sepolia 0x0BA8168Fde926504D44a9AeBaDC50E5c4DE256B2",
+    "verify:GBPX:implementation": "hardhat verify --network sepolia 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e"
   },
   "author": "",
   "license": "ISC",

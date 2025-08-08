@@ -32,7 +32,7 @@ const config: HardhatUserConfig = {
 
   networks: {
     sepolia: {
-      url: 'https://sepolia.infura.io/v3/a45c5d5ff4694265acab3ade411e13ae', // `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     }
   },
