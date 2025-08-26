@@ -26,7 +26,18 @@ The KESX token is a standard ERC20 token with the following default parameters:
 - Includes storage gaps for future upgrades
 - Only the contract owner can perform upgrades
 
-## Deployments
+## Mainnet Deployment
+
+KESXUpgradeable deployed to: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
+Token name: Kenyan Shilling Stablecoin
+Token symbol: KESX
+Total supply: 1000000000000000000000000n
+Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
+Implementation address: 0x93445f22f4d5ac6fA64Ba26e385404b9A6674864
+
+For future upgrades, use the PROXY address: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
+
+## Testnet Deployments
 
 ### Upgradeable KESX Contract
 
