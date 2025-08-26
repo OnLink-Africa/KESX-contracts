@@ -34,6 +34,10 @@ const config: HardhatUserConfig = {
     sepolia: {
       url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
+    },
+    polygon: {
+      url: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     }
   },
   etherscan: {
