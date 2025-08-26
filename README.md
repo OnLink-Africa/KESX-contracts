@@ -26,7 +26,41 @@ The KESX token is a standard ERC20 token with the following default parameters:
 - Includes storage gaps for future upgrades
 - Only the contract owner can perform upgrades
 
-## Deployments
+## Polygon Deployments
+
+## Polygon Deployments
+
+### KESX
+
+KESXUpgradeable deployed to: 0x46c9457f1d5af63fC203f3078225063C66cB6789
+Token name: Kenyan Shilling Stablecoin
+Token symbol: KESX
+Total supply: 1000000000000000000000000n
+Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
+Implementation address: 0x5b26E4183A1f9CA8A5D9d7FBe7c9d438Ff078AD8
+
+Verifying deployment...
+Initial supply matches: true
+Owner balance matches total supply: true
+
+For future upgrades, use the PROXY address: 0x46c9457f1d5af63fC203f3078225063C66cB6789
+
+### GBPX
+
+GBPXUpgradeable deployed to: 0x033dA2Cd9825dcF0dca5534EE39bE947Eeb7Ca1E
+Token name: British Pound Stablecoin
+Token symbol: GBPX
+Total supply: 1000000000000000000000000n
+Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
+Implementation address: 0x5b26E4183A1f9CA8A5D9d7FBe7c9d438Ff078AD8
+
+Verifying deployment...
+Initial supply matches: true
+Owner balance matches total supply: true
+
+For future upgrades, use the PROXY address: 0x033dA2Cd9825dcF0dca5534EE39bE947Eeb7Ca1E
+
+## Sepolia Deployments
 
 ### Upgradeable KESX Contract
 
