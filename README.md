@@ -26,7 +26,9 @@ The KESX token is a standard ERC20 token with the following default parameters:
 - Includes storage gaps for future upgrades
 - Only the contract owner can perform upgrades
 
-## Mainnet Deployment
+## Mainnet Deployments
+
+### Ethereum Mainnet
 
 KESXUpgradeable deployed to: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
 Token name: Kenyan Shilling Stablecoin
@@ -36,6 +38,17 @@ Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
 Implementation address: 0x93445f22f4d5ac6fA64Ba26e385404b9A6674864
 
 For future upgrades, use the PROXY address: 0x3d7c1cfB36f394000406bb24f3D37F602Acbd83e
+
+### Polygon Mainnet
+
+KESXUpgradeable deployed to: 0x5769f3D43CB46775ccBE576EE760d450C6FB9Acc
+Token name: Kenyan Shilling Stablecoin
+Token symbol: KESX
+Total supply: 1000000000000000000000000n
+Owner: 0xf31FC0D18A24c6Ae4225A0d4eEB709AC0a18E993
+Implementation address: 0xfFc3dB112FdfD30bb57EA815216765c70E06C12f
+
+For future upgrades, use the PROXY address: 0x5769f3D43CB46775ccBE576EE760d450C6FB9Acc
 
 ## Testnet Deployments
 
@@ -126,8 +139,11 @@ npm run deploy:upgradeable:local
 # Test network (Sepolia)
 npm run deploy:upgradeable:testnet
 
-# Mainnet deployment
-npm run deploy:upgradeable:mainnet
+# Ethereum mainnet deployment
+npm run deploy:mainnet
+
+# Polygon mainnet deployment
+npm run deploy:polygon:mainnet
 ```
 
 ### Contract Upgrades
@@ -144,8 +160,11 @@ npm run upgrade:local
 # Upgrade on testnet
 npm run upgrade:testnet
 
-# Upgrade on mainnet
+# Upgrade on Ethereum mainnet
 npm run upgrade:mainnet
+
+# Upgrade on Polygon mainnet
+npm run upgrade:polygon:mainnet
 ```
 
 ## Upgradeable Contract Features
