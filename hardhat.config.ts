@@ -47,11 +47,13 @@ const config: HardhatUserConfig = {
       chainId: 137
     }
   },
+  // Etherscan V2 API - single API key works for all chains (Ethereum, Polygon, etc.)
+  // https://docs.etherscan.io/v2-migration
   etherscan: {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY || '',
       sepolia: process.env.ETHERSCAN_API_KEY || '',
-      polygon: process.env.POLYGONSCAN_API_KEY || ''
+      polygon: process.env.ETHERSCAN_API_KEY || ''
     }
   },
   sourcify: {
