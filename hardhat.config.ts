@@ -38,10 +38,23 @@ const config: HardhatUserConfig = {
     sepolia: {
       url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
+    },
+    polygon: {
+      url:
+        process.env.POLYGON_RPC_URL ||
+        `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+      chainId: 137
     }
   },
+  // Etherscan V2 API - single API key works for all chains (Ethereum, Polygon, etc.)
+  // https://docs.etherscan.io/v2-migration
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: {
+      mainnet: process.env.ETHERSCAN_API_KEY || '',
+      sepolia: process.env.ETHERSCAN_API_KEY || '',
+      polygon: process.env.ETHERSCAN_API_KEY || ''
+    }
   },
   sourcify: {
     enabled: true
