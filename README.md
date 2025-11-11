@@ -50,6 +50,9 @@ Implementation address: 0xfFc3dB112FdfD30bb57EA815216765c70E06C12f
 
 For future upgrades, use the PROXY address: 0x5769f3D43CB46775ccBE576EE760d450C6FB9Acc
 
+**Uniswap V4 Pool**
+https://app.uniswap.org/positions/v4/polygon/56633
+
 ## Testnet Deployments
 
 ### Upgradeable KESX Contract
